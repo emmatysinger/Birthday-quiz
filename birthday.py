@@ -39,52 +39,32 @@ todaymonth=month_name[todaymonth]
 todaymonth=todaymonth.lower()
 
 name=input("Hello, what is your name? ")
-month=input("Hi{0}, what was the name of the month you were born in? ".format(name))
+month=input("Hi {0}, what was the name of the month you were born in? ".format(name))
 month=month.lower()
-year=input("And what year were you born in, {0}? ".format(name))
-day=input("And the day?")
+year=int(input("And what year were you born in, {0}? ".format(name)))
+day=input("And the day? ")
 
 if month=="october" and day=="31":
     print("You were born on Halloween!")
 elif month==todaymonth and day==todaydate:
     print("Happy Birthday!")
-elif month==december or month==january or month==february:
+    
+if month=="december" or month=="january" or month=="february":
     season="winter"
-    if year>=1980 and year<1990:
-        print("{0}, you are a {1} baby of the eighties.".format(name,season))
-    elif year>=1990 and year<1999:
-        print("{0}, you are a {1} baby of the nineties.".format(name,season))
-    elif year>=2000:
-        print("{0}, you are a {1} baby of the two thousands.".format(name,season))
-    else:
-         print("{0}, you are a {1} baby of the Stone Age.".format(name,season))
-elif month==march or month==april or month==may:
+elif month=="march" or month=="april" or month=="may":
     season="spring"
-    if year>=1980 and year<1990:
-        print("{0}, you are a {1} baby of the eighties.".format(name,season))
-    elif year>=1990 and year<1999:
-        print("{0}, you are a {1} baby of the nineties.".format(name,season))
-    elif year>=2000:
-        print("{0}, you are a {1} baby of the two thousands.".format(name,season))
-    else:
-         print("{0}, you are a {1} baby of the Stone Age.".format(name,season))
-elif month==june or month==july or month==august:
+elif month=="june" or month=="july" or month=="august":
     season="summer"
-    if year>=1980 and year<1990:
-        print("{0}, you are a {1} baby of the eighties.".format(name,season))
-    elif year>=1990 and year<1999:
-        print("{0}, you are a {1} baby of the nineties.".format(name,season))
-    elif year>=2000:
-        print("{0}, you are a {1} baby of the two thousands.".format(name,season))
-    else:
-         print("{0}, you are a {1} baby of the Stone Age.".format(name,season))
 else:
     season="fall"
-    if year>=1980 and year<1990:
-        print("{0}, you are a {1} baby of the eighties.".format(name,season))
-    elif year>=1990 and year<1999:
-        print("{0}, you are a {1} baby of the nineties.".format(name,season))
-    elif year>=2000:
-        print("{0}, you are a {1} baby of the two thousands.".format(name,season))
-    else:
-         print("{0}, you are a {1} baby of the Stone Age.".format(name,season))
+
+if year>=1980 and year<1990:
+    age="eighties"
+elif year>=1990 and year<1999:
+    age="nineties"
+elif year>=2000:
+    age="two thousands"
+else:
+    age="Stone Age"
+
+print("{0}, you are a {1} baby of the {2}.".format(name,season,age))
