@@ -1,7 +1,7 @@
 """
 birthday.py
-Author: Emma
-Credit: Tysinger
+Author: Emma Tysinger
+Credit: 
 Assignment:
 
 Your program will ask the user the following questions, in this order:
