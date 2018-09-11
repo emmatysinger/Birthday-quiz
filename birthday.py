@@ -44,11 +44,6 @@ month=month.lower()
 year=int(input("And what year were you born in, {0}? ".format(name)))
 day=input("And the day? ")
 
-if month=="october" and day=="31":
-    print("You were born on Halloween!")
-elif month==todaymonth and day==todaydate:
-    print("Happy Birthday!")
-    
 if month=="december" or month=="january" or month=="february":
     season="winter"
 elif month=="march" or month=="april" or month=="may":
@@ -67,4 +62,9 @@ elif year>=2000:
 else:
     age="Stone Age"
 
-print("{0}, you are a {1} baby of the {2}.".format(name,season,age))
+if month=="october" and day=="31":
+    print("You were born on Halloween!")
+elif month==todaymonth and day==todaydate:
+    print("Happy Birthday!")
+else:
+    print("{0}, you are a {1} baby of the {2}.".format(name,season,age))
