@@ -38,7 +38,6 @@ todaydate=datetime.today().day
 mnth=month_name[todaymonth]
 mnth=mnth.lower()
 
-print(mnth, todaydate)
 name=input("Hello, what is your name? ")
 month=input("Hi {0}, what was the name of the month you were born in? ".format(name))
 month=month.lower()
