@@ -62,7 +62,7 @@ elif year>=2000:
 else:
     age="Stone Age"
 
-if month=="october" and day=="31":
+if month=="october" and day==31:
     print("You were born on Halloween!")
 elif mnth==month and todaydate==day:
     print("Happy birthday!")
